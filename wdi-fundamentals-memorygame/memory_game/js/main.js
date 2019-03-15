@@ -39,11 +39,21 @@ checkForMatch = function () {
 if (cardsInPlay.length === 2) {
 	if (cardsInPlay[0] === cardsInPlay[1]){
 		alert ("You found a match!")
+		var table = document.getElementsByTagName("table")[0];
+		var row = table.insertRow(0);
+		var cell1 = row.insertCell(0);
+		cell1.innerHTML = "You won this game.";
 	} else {
 		alert ("Sorry, try again.")
+		var table = document.getElementsByTagName("table")[0];
+		var row = table.insertRow(0);
+		var cell1 = row.insertCell(0);
+		cell1.innerHTML = "You lost this game."
 	}
 }
 }
+
+
 
 //function that is flipping the card to reveal its front
 var flipCard = function () {
@@ -82,6 +92,7 @@ var createBoard = function () {
 		cardElement.setAttribute('data-id',i);
 		cardElement.addEventListener('click',flipCard);
 		document.getElementById('game-board').appendChild(cardElement);
+
 	}
 }
 
@@ -97,3 +108,5 @@ var refreshGame = function () {
 createBoard();
 
 refreshGame();
+
+

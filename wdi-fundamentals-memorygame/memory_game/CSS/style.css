@@ -96,12 +96,29 @@ button {
 	font-family: 'Cookie', cursive;
 	font-size: 50px;
 	letter-spacing: .5px;
-
-}
-
-#reset-button {
 	color: white;
+
 }
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #F15B43;
+	color: white;
+	border-color: black;
+	font-family: "Droid Serif", serif;
+	font-size: 15px;
+	border-style: solid
+	border-width: thick;
+}
+
+tr {
+	border-color: black;
+	border-width:thick;
+	border-style: solid;
+
+}
+
 
 .copyright {
 	float: left;
