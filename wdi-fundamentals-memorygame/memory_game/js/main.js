@@ -63,8 +63,16 @@ console.log(cards[cardId].suit);
 checkForMatch();
 }
 
+//this function will flip the cards back to what they were
 
-//createBoard function will refresh the gameboard
+var refreshCards = function () {
+
+	document.getElementById('game-board').innerHTML="";
+	createBoard();
+};
+
+
+//createBoard function will start the gameboard and allow us to play
 var createBoard = function () {
 	for (var i = 0; i < cards.length; i++){
 		//Creating element
@@ -76,9 +84,15 @@ var createBoard = function () {
 	}
 }
 
+//refresh button will refresh the gameboard
+var refreshGame = function () {
 
+		var refreshButton = document.getElementsByTagName("button")[0];
+		refreshButton.addEventListener('click', refreshCards)
 
+}
 
-// 
 
 createBoard();
+
+refreshGame();
