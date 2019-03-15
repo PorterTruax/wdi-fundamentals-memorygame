@@ -69,6 +69,7 @@ var refreshCards = function () {
 
 	document.getElementById('game-board').innerHTML="";
 	createBoard();
+	cardsInPlay = [];
 };
 
 
